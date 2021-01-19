@@ -14,6 +14,56 @@
   </head>
 
   <body>
+    <div class="nav">
+
+                    <!-- martini -->
+<!--          <div class="cocktail martini">
+          <div class="cocktail__glass cocktail__glass-classic">
+            <div class="olive"></div>
+            <div class="stand"></div>
+          </div>
+        </div> -->
+
+<!--       <div class="btn-container-huge">
+        <%#= link_to cocktails_path, class: "btn-neumorphism btn-circle-huge" do %>
+          <p class="inner-txt-shadow">all</p>
+        <%# end %>
+      </div>
+      <h1 class="title-main">Cocktails</h1>
+        <div class="btn-container-huge">
+          <%#= link_to new_cocktail_path, class: "btn-neumorphism btn-circle-huge" do %>
+            <p class="inner-txt-shadow">add</p>
+          <%# end %>
+        </div> -->
+
+        <h1 class="title-main">Cocktails</h1>
+    </div>
+
+    <div class="nav-btn-container">
+
+      <%= link_to cocktails_path, class: "btn-rect-nav" do %>
+        <div class="btn-rect-container btn-all-cocktails">
+          <div class="white-frame-top-container">
+              <h3>all</h3>
+          </div>
+          <div class="black-frame-bottom-container">
+            <h3>all</h3>
+          </div>
+        </div>
+      <% end %>
+
+      <%= link_to new_cocktail_path, class: "btn-rect-nav" do %>
+        <div class="btn-rect-container btn-add-cocktail">
+          <div class="white-frame-top-container">
+            <h3>add</h3>
+          </div>
+          <div class="black-frame-bottom-container">
+            <h3>add</h3>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
     <%= yield %>
   </body>
 </html>

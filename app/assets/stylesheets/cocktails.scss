@@ -1,0 +1,94 @@
+// Place all the styles related to the Cocktails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "config/variables";
+
+.cards-container {
+  // display: flex;
+  // justify-content: space-evenly;
+  // flex-wrap: wrap;
+  // width: 1216px;
+  width: 100%;
+  margin: 120px auto 0 auto;
+}
+
+.outer-cocktail-container {
+  // background: $blue-linear-gradient-background;
+  // box-shadow: 0 0 2px 1px rgba(0,0,0,0.5);
+  margin: 128px 0;
+}
+
+.cocktail-container {
+  display: flex;
+  align-items: center;
+  width: 900px;
+  margin: 64px auto;
+  border: 1px solid rgba(0,0,0,0.5);
+  background: #F4F4F4;
+  position: relative;
+}
+
+.container-rounded-corners {
+  padding: $spacer * 4;
+  margin: 0 auto;
+  padding: $spacer * 4 $spacer * 4;
+  border-radius: $spacer * 4;
+}
+
+.cocktail-page-container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cocktail-photo {
+  height: 440px;
+  margin-top: $spacer * 4;
+  width: 33%;
+  // background: linear-gradient( -45deg, rgb(192,164,73), rgb(200,172,81), rgb(208,180,89));
+}
+
+.cocktail-description {
+  margin: $spacer * 2 $spacer * 4;
+  height: 480px;
+  width: 33%;
+  // background: linear-gradient( -45deg, rgb(240,202,121), rgb(248,210,129), rgb(255,218,137));
+}
+
+.cocktail-ingredients {
+  height: 440px;
+  margin-top: $spacer * 4;
+  width: 33%;
+  // background: linear-gradient( -45deg, rgb(208,180,89), rgb(216,188,97), rgb(222,196,105));
+}
+
+.img-fit {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  // border-radius: 16px;
+  // box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.15), -2px -2px 2px 2px rgba(255,255,255, 0.2);
+}
+
+.cocktail-title {
+  // font-family: 'Calligraffitti', cursive;
+  font-family: 'Bowlby One SC', cursive;
+  // line-height: 1.5;
+  margin: 0 132px;
+  font-size: 36px;
+
+
+}
+
+.cocktail-img {
+  height: 560px;
+  width: 300px;
+}
+
+.cocktail-img img{
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+

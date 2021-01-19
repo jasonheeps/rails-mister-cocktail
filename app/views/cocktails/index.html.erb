@@ -1,0 +1,37 @@
+<!--   <div class="cards-container bg-yellow-linear-gradient container-rounded-corners">
+    <%# @cocktails.each do |cocktail| %>
+      <div class="cocktail-card">
+        <%#= image_tag "blue-cocktail.jpg", alt: "blue cocktail"%>
+        <div class="card-body">
+          <h5 class="card-title"><%#= cocktail.name.upcase %></h5>
+          <%#= link_to 'show', cocktail_path(cocktail), class: "btn-neumorphism btn-rect-sm btn-card-position"  %>
+        </div>
+      </div>
+    <%# end %>
+  </div> -->
+
+<div class="cards-container">
+  <% @cocktails.each do |cocktail| %>
+
+  <div class="outer-cocktail-container">
+
+
+    <div class="cocktail-container">
+      <div class="cocktail-img">
+        <%= image_tag "blue-cocktail.jpg", alt: "blue cocktail"%>
+      </div>
+      <div>
+        <div class="card-text">
+          <h1 class="cocktail-title"><%= cocktail.name %></h1>
+          <div class="link-to-show-page-container">
+            <%= link_to "SHOW", cocktail_path(cocktail), class: "link-to-show-page" %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <% end %>
+</div>

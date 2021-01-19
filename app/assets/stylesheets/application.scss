@@ -2,6 +2,7 @@
 @import "config/fonts";
 @import "config/colors";
 @import "config/bootstrap_variables";
+@import "config/variables";
 
 // External libraries
 @import "bootstrap/scss/bootstrap";
@@ -11,3 +12,186 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+@import "cocktails";
+@import "doses";
+
+body {
+  // background: $blue-linear-gradient-background;
+  // background-size: 400% 400%;
+  // animation: gradient 15s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.nav {
+  background: $blue-linear-gradient-background;
+  background-size: 400% 400%;
+  animation: gradient 15s linear infinite;
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+
+  // height: 240px;
+  height: 560px;
+  // width: 1216px;
+  width: 100%;
+  padding: $spacer * 16 $spacer * 32;
+  // margin: $spacer * 4 auto;
+  margin-bottom: $spacer * 8;
+  // border-radius: $spacer * 4;
+  position: relative;
+  box-shadow: 0 0 2px 1px rgba(0,0,0,0.5);
+
+  a {
+    text-decoration: none;
+  }
+
+  .title-main {
+    // font-family: 'Bowlby One SC', cursive;
+    font-family: 'Bilbo Swash Caps', cursive;
+    // color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 40px;
+    letter-spacing: 12px;
+    border: 1px white solid;
+    padding: $spacer * 8;
+  }
+}
+
+.white-frame {
+    border: 1px white solid;
+    padding: $spacer * 8;
+}
+
+.btn-neumorphism {
+  position: absolute;
+  bottom: -60px;
+}
+
+.nav-btn-container {
+  width: 700px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+// ----------------
+// martini cocktail aimation
+// ----------------
+$glass-boder-color: rgba(255, 255, 255, 0.8);
+
+$glass-classic-w: 25px;
+
+$cherry-color: #C40000;
+
+$olive-r: 10px;
+$olive-color: rgba(128,128,0, 0.5);
+$toothpick-color: #dEb887;
+
+/* cocktails */
+$martini: rgba(255, 255, 255, 0.3);
+
+
+.cocktail {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+
+  .olive {
+    width: $olive_r;
+    height: $olive_r;
+    border-radius: 50%;
+    background: $olive-color;
+    position: relative;
+    left: -2px;
+    top: -20px;
+    animation: float-simple 5s infinite alternate linear;
+    &:before {
+      content: '';
+      background-color: transparent;
+      width: 23px;
+      height: 15px;
+      border: 1px solid $toothpick-color;
+      border-right: none;
+      border-top: none;
+      border-bottom: none;
+      display: block;
+      position: absolute;
+      top: -15px;
+      left: 5px;
+    }
+  }
+
+  .cocktail__glass-classic {
+    position: relative;
+    width:0;
+    height:0;
+    border-left: $glass-classic-w solid transparent;
+    border-right: $glass-classic-w solid transparent;
+    border-top: $glass-classic-w solid rgba(255, 255, 255, 0.3);
+
+    /* fill */
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: ($glass-classic-w - 7) solid transparent;
+      border-right: ($glass-classic-w - 7) solid transparent;
+      border-top: ($glass-classic-w - 7) solid lighten($martini, 50%);
+      position: absolute;
+      top: -20px;
+      left: #{-($glass-classic-w - 7)};
+      animation: fill-classic 0.6s forwards ease;
+      transform: translate3d(0,0,0) scale(0);
+      transform-origin: 50% bottom;
+    }
+
+    /* gambo */
+    &:after {
+      content:'';
+      position: absolute;
+      left: -1px;
+      bottom:-27px;
+      height: 28px;
+      width:2px;
+      background: rgba(255,255,255, 0.3);
+    }
+
+    .stand {
+      width: 0;
+      height: 0;
+      border-left: ($glass-classic-w - 18) solid transparent;
+      border-right: ($glass-classic-w - 18) solid transparent;
+      border-bottom: ($glass-classic-w - 20) solid lighten($martini, 50%);
+      position: relative;
+      left: -7px;
+      top: 16px;
+    }
+  }
+}
+
+@keyframes float {
+  50% {transform: rotate(260deg) translate3d(-2px,1px,0);}
+}
+@keyframes float-simple {
+  50% {transform: rotate(15deg) translate3d(0px,2px,0);}
+}
+
+@keyframes fill-classic {
+  100% {
+    transform: translate3d(0,0,0) scale(1);
+  }
+}
