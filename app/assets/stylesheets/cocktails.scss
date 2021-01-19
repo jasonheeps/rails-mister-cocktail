@@ -4,17 +4,11 @@
 @import "config/variables";
 
 .cards-container {
-  // display: flex;
-  // justify-content: space-evenly;
-  // flex-wrap: wrap;
-  // width: 1216px;
   width: 100%;
   margin: 120px auto 0 auto;
 }
 
 .outer-cocktail-container {
-  // background: $blue-linear-gradient-background;
-  // box-shadow: 0 0 2px 1px rgba(0,0,0,0.5);
   margin: 128px 0;
 }
 
@@ -28,39 +22,31 @@
   position: relative;
 }
 
-.container-rounded-corners {
-  padding: $spacer * 4;
-  margin: 0 auto;
-  padding: $spacer * 4 $spacer * 4;
-  border-radius: $spacer * 4;
-}
-
 .cocktail-page-container {
   width: 1200px;
-  margin: 0 auto;
+  height: 480px;
+  margin: $spacer * 8 auto;
   display: flex;
   justify-content: space-between;
+  border: 1px solid black;
 }
 
 .cocktail-photo {
-  height: 440px;
-  margin-top: $spacer * 4;
+  // height: 480px;
+  // margin-top: $spacer * 4;
   width: 33%;
-  // background: linear-gradient( -45deg, rgb(192,164,73), rgb(200,172,81), rgb(208,180,89));
 }
 
 .cocktail-description {
   margin: $spacer * 2 $spacer * 4;
   height: 480px;
   width: 33%;
-  // background: linear-gradient( -45deg, rgb(240,202,121), rgb(248,210,129), rgb(255,218,137));
 }
 
 .cocktail-ingredients {
   height: 440px;
   margin-top: $spacer * 4;
   width: 33%;
-  // background: linear-gradient( -45deg, rgb(208,180,89), rgb(216,188,97), rgb(222,196,105));
 }
 
 .img-fit {
@@ -77,8 +63,7 @@
   // line-height: 1.5;
   margin: 0 132px;
   font-size: 36px;
-
-
+  margin-bottom: $spacer * 4;
 }
 
 .cocktail-img {

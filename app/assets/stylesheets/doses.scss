@@ -1,3 +1,22 @@
 // Place all the styles related to the Doses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.link-icon-sm {
+  color: black;
+  padding: 8px;
+  // background: #F4F4F4;
+
+  &:hover {
+    color: black;
+    filter: invert(100%);
+    background: white;
+  }
+}
+
+.cocktail-dose {
+  padding: 4px;
+  margin: 4px;
+  border: 1px solid black;
+  list-style: none;
+}
