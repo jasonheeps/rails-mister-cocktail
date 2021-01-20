@@ -18,7 +18,8 @@
 
     <div class="cocktail-container">
       <div class="cocktail-img">
-        <%= image_tag "blue-cocktail.jpg", alt: "blue cocktail"%>
+        <!-- <%#= image_tag "blue-cocktail.jpg", alt: "blue cocktail"%> -->
+        <%= cl_image_tag cocktail.photo.key, crop: :fill, class: "img-fit" %>
       </div>
       <div>
         <div class="card-text">

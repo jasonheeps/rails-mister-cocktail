@@ -61,9 +61,8 @@
   // font-family: 'Calligraffitti', cursive;
   font-family: 'Bowlby One SC', cursive;
   // line-height: 1.5;
-  margin: 0 132px;
+  margin: $spacer * 4 132px;
   font-size: 36px;
-  margin-bottom: $spacer * 4;
 }
 
 .cocktail-img {
