@@ -24,9 +24,15 @@
       <div>
         <div class="card-text">
           <h1 class="cocktail-title"><%= cocktail.name %></h1>
-          <div class="link-to-show-page-container">
-            <%= link_to "SHOW", cocktail_path(cocktail), class: "link-to-show-page" %>
-          </div>
+<!--           <div class="link-to-show-page-container">
+            <%#= link_to "SHOW", cocktail_path(cocktail), class: "link-to-show-page" %>
+          </div> -->
+          <%= link_to cocktail_path(cocktail), class: "link-to-show-page" do %>
+            <div class="link-to-show-page-container">
+              SHOW
+            </div>
+          <% end %>
+
         </div>
       </div>
     </div>
