@@ -4,8 +4,12 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @cocktail = Cocktail.find_by_id(params[:cocktail_id])
     @review.cocktail = @cocktail
-    @review.save
-    redirect_to cocktail_path(@cocktail)
+    if @review.save
+      redirect_to cocktail_path(@cocktail)
+    else
+      render :new
+    end
+
   end
 
   private
