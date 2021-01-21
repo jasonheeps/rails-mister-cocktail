@@ -6,6 +6,7 @@ class CocktailsController < ApplicationController
 
   def show
     @cocktail = Cocktail.find_by_id(params[:id])
+    @review = Review.new
   end
 
   def new

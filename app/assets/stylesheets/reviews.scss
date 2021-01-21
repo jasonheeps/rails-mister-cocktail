@@ -1,0 +1,28 @@
+// Place all the styles related to the Reviews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.review-section-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 64px auto;
+  width: 1200px;
+
+}
+
+.reviews-container {
+  width: 560px;
+  padding: $spacer * 2;
+}
+
+.rating-container {
+  margin-top: $spacer * 2;
+  font-family: 'Bowlby One SC', cursive;
+  color: rgb(140,140,140);
+}
+
+.rating {
+  font-family: 'Bowlby One SC', cursive;
+  font-size: 20px;
+}

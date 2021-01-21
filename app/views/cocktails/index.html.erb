@@ -18,15 +18,19 @@
 
     <div class="cocktail-container">
       <div class="cocktail-img">
-        <!-- <%#= image_tag "blue-cocktail.jpg", alt: "blue cocktail"%> -->
         <%= cl_image_tag cocktail.photo.key, crop: :fill, class: "img-fit" %>
       </div>
       <div>
         <div class="card-text">
           <h1 class="cocktail-title"><%= cocktail.name %></h1>
-<!--           <div class="link-to-show-page-container">
-            <%#= link_to "SHOW", cocktail_path(cocktail), class: "link-to-show-page" %>
-          </div> -->
+
+          <div class="rating-container">
+            <% @reviews = cocktail.reviews %>
+            <% @sum = 0 %>
+            <% @reviews.each{ |review| @sum += review.rating}%>
+            <%= @sum.fdiv(@reviews.size).to_s + " / 5" if @reviews.size > 0 %>
+          </div>
+
           <%= link_to cocktail_path(cocktail), class: "link-to-show-page" do %>
             <div class="link-to-show-page-container">
               SHOW
